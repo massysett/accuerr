@@ -1,0 +1,9 @@
+name: genCabal
+version: 0.1
+cabal-version: >= 1.2
+build-type: Simple
+
+Executable genCabal
+  main-is: genCabal.hs
+  build-depends: cartel == 0.16.*
+               , base ==4.9.*

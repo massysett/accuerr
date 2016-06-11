@@ -1,0 +1,4 @@
+#!/bin/sh
+
+stack build
+stack exec genCabal > ../accuerr/accuerr.cabal
