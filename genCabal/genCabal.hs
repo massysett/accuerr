@@ -3,7 +3,7 @@ module Main (main) where
 import qualified Cartel as C
 
 version :: [Word]
-version = [0,2]
+version = [0,2,0,0]
 
 -- Packages
 base :: C.Package
