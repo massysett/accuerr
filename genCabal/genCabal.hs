@@ -3,23 +3,28 @@ module Main (main) where
 import qualified Cartel as C
 
 version :: [Word]
-version = [0,2,0,0]
+version = [0,2,0,2]
 
 -- Packages
 base :: C.Package
-base = C.nextMajor "base" [4,9,0,0]
+base = C.nextMajor "base" [4,8,0,0]
 
 lens :: C.Package
-lens = C.atLeast "lens" [4,14]
+lens = C.atLeast "lens" [4,13]
 
 bifunctors :: C.Package
-bifunctors = C.atLeast "bifunctors" [5,3]
+bifunctors = C.atLeast "bifunctors" [5,2]
+
+-- | Only needed for GHC versions before 8.0
+semigroups :: C.Package
+semigroups = C.atLeast "semigroups" [0,18,1]
 
 depends :: [C.Package]
 depends =
   [ base
   , lens
   , bifunctors
+  , semigroups
   ]
 
 props :: C.Properties
